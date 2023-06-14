@@ -12,8 +12,7 @@
                     <label for="title" class="col-sm-2 col-form-label">Title</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control 
-                            <?= ($validation?->hasError("title") ? "is-invalid" : ""); ?>" id="title" name="title" autofocus value="
-                            <?= $anime["title"]; ?>">
+                            <?= ($validation?->hasError("title") ? "is-invalid" : ""); ?>" id="title" name="title" autofocus value="<?= old("title", $anime["title"]); ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
                             <?= $validation?->getError("title"); ?>
                         </div>
@@ -22,7 +21,7 @@
                 <div class="row mb-3">
                     <label for="author" class="col-sm-2 col-form-label">Author</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation?->hasError("author") ? "is-invalid" : ""); ?>" id="author" name="author" value="<?= $anime["author"]; ?>">
+                        <input type="text" class="form-control <?= ($validation?->hasError("author") ? "is-invalid" : ""); ?>" id="author" name="author" value="<?= old("author", $anime["author"]); ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
                             <?= $validation?->getError("author"); ?>
                         </div>
@@ -31,7 +30,7 @@
                 <div class="row mb-3">
                     <label for="studio" class="col-sm-2 col-form-label">Studio</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation?->hasError("studio") ? "is-invalid" : ""); ?>" id="studio" name="studio" value="<?= $anime["studio"]; ?>">
+                        <input type="text" class="form-control <?= ($validation?->hasError("studio") ? "is-invalid" : ""); ?>" id="studio" name="studio" value="<?= old("studio", $anime["studio"]); ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
                             <?= $validation?->getError("studio"); ?>
                         </div>
@@ -40,7 +39,7 @@
                 <div class=" row mb-3">
                     <label for="cover" class="col-sm-2 col-form-label">Cover</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="cover" name="cover" value="<?= $anime["cover"]; ?>">
+                        <input type="text" class="form-control" id="cover" name="cover" value="<?= old("cover", $anime["cover"]); ?>">
                     </div>
                 </div>
                 <button type=" submit" class="btn btn-outline-primary">Change Data</button>
