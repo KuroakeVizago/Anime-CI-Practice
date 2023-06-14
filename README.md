@@ -1,3 +1,7 @@
+## Important to know
+This CI4 Web Application is using SQL Local Database, 
+the local database table that was made for debug purpose is located at public/database folder.
+
 # CodeIgniter 4 Application Starter
 
 ## What is CodeIgniter?
